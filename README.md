@@ -67,5 +67,26 @@ The final recommendation score is calculated as follows:
 - **Negative Mood**: Increases weight of movies with high sentiment (item sentiment).
 - **Positive Mood**: Increases weight of collaborative filtering (leveraging historical preferences).
 
+## 🧪 Testing the Context Engine
+You can test the system's adaptability by trying these different mood scenarios:
+
+| Mood Category | Input Example | Why it's interesting |
+| :--- | :--- | :--- |
+| **Relaxation** | *"I'm exhausted, need something funny."* | Boosts 'Comedy' genre + positive sentiment items. |
+| **High Intensity** | *"I AM PUMPED! GIVE ME SPACE ACTION!"* | High-intensity boost for collaborative hits + Sci-Fi/Action genre boost. |
+| **Baseline** | *"Just a normal day."* | Allows the Collaborative Engine to lead with pure history. |
+
+### Visual Demonstrations
+The system dynamically adjusts its scoring algorithm based on both **Sentiment Intensity** and **Intent (Topic Extraction)**.
+
+| Mood Input | Detected Mood | UI Result |
+| :--- | :--- | :--- |
+| Relaxing mood | Positive/Neutral | ![Result 1](docs/assets/ui_example_1.png) |
+| Pumped/Action | Positive (High Intensity) | ![Result 2](docs/assets/ui_example_2.png) |
+| Mixed Sentiment | Variable | ![Result 3](docs/assets/ui_example_3.png) |
+| Detailed Context | Context-Aware | ![Result 4](docs/assets/ui_example_4.png) |
+| User Profile 1 | Personalization | ![Result 5](docs/assets/ui_example_5.png) |
+| User Profile 4 | Personalization | ![Result 6](docs/assets/ui_example_6.png) |
+
 ---
 *HybridRec++ Recommendation Engine v0.1.0 | Developed for production-grade context-aware systems.*
