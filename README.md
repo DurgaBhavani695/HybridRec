@@ -62,10 +62,16 @@ We analyzed the rating distribution from the MovieLens dataset to ensure the mod
 
 
 ## 🧠 How the Hybrid Score Works
-The final recommendation score is calculated as follows:
-- **Base Score**: `0.5 * Collaborative + 0.3 * Content + 0.2 * Sentiment`
-- **Negative Mood**: Increases weight of movies with high sentiment (item sentiment).
-- **Positive Mood**: Increases weight of collaborative filtering (leveraging historical preferences).
+The engine uses a sophisticated three-factor scoring algorithm:
+
+- **Base Score**: `0.5 * Collaborative (SVD) + 0.3 * Content (TF-IDF) + 0.2 * Item Sentiment`
+- **Context-Aware Adjustment**: 
+    - **Intensity**: We calculate mood intensity from -1.0 to 1.0. The stronger the emotion, the larger the dynamic boost to the recommendation score.
+    - **Neutral Mode**: If no strong sentiment is detected, the engine gracefully falls back to the personalized collaborative filtering score, ensuring stable and reliable results.
+    - **Positive/Negative Shift**: 
+        - *Negative Sentiment*: Boosts feel-good items proportional to the user's negative intensity.
+        - *Positive Sentiment*: Boosts historical collaborative matches proportional to the user's positive intensity.
+    - **Topic Matching**: The system scans your input for semantic keywords (e.g., 'sports', 'funny', 'space') and applies an aggressive **0.8 boost** to corresponding movie genres, ensuring your specific intent is prioritized.
 
 ## 🧪 Testing the Context Engine
 You can test the system's adaptability by trying these different mood scenarios:
