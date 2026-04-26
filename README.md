@@ -33,8 +33,11 @@ streamlit run app/streamlit_app.py
 *(This automatically initializes the environment, installs dependencies, and downloads the necessary data.)*
 
 
-## 📊 Dataset
-The system uses the **MovieLens Small Dataset** (100k ratings on 9k movies), which is automatically downloaded and processed on first run.
+## 📊 Dataset Distribution
+We analyzed the rating distribution from the MovieLens dataset to ensure the model is trained on a healthy range of data.
+
+![Rating Distribution](docs/assets/rating_distribution.png)
+
 
 ## 🧠 How the Hybrid Score Works
 The final recommendation score is calculated as follows:
