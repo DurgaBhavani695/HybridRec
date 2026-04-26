@@ -6,7 +6,7 @@ import os
 
 class CollaborativeRecommender:
     def __init__(self):
-        self.model = TruncatedSVD(n_components=2, random_state=42) # n_components=2 for the small test df
+        self.model = TruncatedSVD(n_components=50, random_state=42)
         self.user_features = None
         self.item_features = None
         self.user_map = {}

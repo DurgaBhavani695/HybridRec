@@ -34,19 +34,21 @@ class HybridRecommender:
         # 5. Topic-Aware Context Matching
         mood_text_lower = mood_text.lower()
         topic_map = {
-            "sports": "Action", 
+            "sports": "Documentary", 
             "love": "Romance",
             "funny": "Comedy",
             "scary": "Horror",
             "future": "Sci-Fi",
             "space": "Sci-Fi",
             "thrill": "Thriller",
-            "adventure": "Adventure"
+            "adventure": "Adventure",
+            "action": "Action",
+            "cartoon": "Animation"
         }
         
         for keyword, genre in topic_map.items():
             if keyword in mood_text_lower:
-                # Boost movies matching this genre
-                recs.loc[recs['genres'].str.contains(genre, case=False), 'hybrid_score'] += 0.3
+                # Increased boost to 0.8 to ensure it strongly overrides base scores
+                recs.loc[recs['genres'].str.contains(genre, case=False), 'hybrid_score'] += 0.8
             
         return recs.sort_values(by='hybrid_score', ascending=False).head(top_n), mood
