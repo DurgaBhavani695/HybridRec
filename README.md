@@ -4,8 +4,10 @@
 
 ## 🚀 Key Features
 
-- **Dynamic Hybrid Engine**: Combines Collaborative Filtering (MF) and Content-Based (TF-IDF) scores.
-- **Mood-Aware Context**: Uses **VADER NLP** to analyze user sentiment in real-time, dynamically re-weighting recommendations based on their current state of mind.
+- **Deep Hybrid Engine**: Seamlessly fuses collaborative filtering (Matrix Factorization) with content-based signals for highly accurate, multi-faceted recommendations.
+- **True Personalization**: Recommendations are driven by your unique historical rating patterns, ensuring that the engine learns and adapts to your specific cinematic taste.
+- **Mood-Aware Context**: Uses **VADER NLP** to analyze your sentiment in real-time, dynamically re-weighting the engine's output based on your current emotional state.
+- **Intent-Driven Discovery**: Advanced keyword extraction instantly surfaces movies that match your specific thematic requests (e.g., 'sports', 'space', 'thriller').
 - **Production-Ready Architecture**: Modular design, TDD-validated core, and cross-platform automated setup.
 - **Visual Analytics**: Built-in architecture visualization and data distribution insights.
 
@@ -21,14 +23,14 @@
 
 ## 🏗️ Architecture
 
-The HybridRec++ engine integrates three distinct recommendation layers with a real-time sentiment analysis context layer.
+The HybridRec++ engine integrates three distinct recommendation layers with a real-time sentiment analysis context layer to balance historical preferences with real-time intent:
 
 ![Architecture Diagram](docs/assets/architecture_diagram.png)
 
-1.  **Collaborative Layer**: Analyzes user-item rating patterns using Truncated SVD.
-2.  **Content Layer**: Processes movie metadata (genres) using TF-IDF and Cosine Similarity.
-3.  **Sentiment Layer**: Analyzes natural language input to detect user mood (Positive/Negative/Neutral).
-4.  **Hybrid Engine**: Merges scores from all layers with dynamic weights based on the detected context.
+1.  **Collaborative Filtering Layer**: **The Personalization Core.** It uses Truncated SVD to map your unique history, ensuring your preferences are the primary driver of the results.
+2.  **Content-Based Layer**: Ensures relevance by surfacing items that share characteristics (genres) with your favorites.
+3.  **Sentiment/Context Layer**: Interprets your natural language "mood" and instantly re-balances the weight of your history vs. thematic discovery.
+4.  **Hybrid Engine**: Synthesizes these inputs using our weighted dynamic-scoring algorithm, producing an optimized ranked list.
 
 ## 🛠️ Installation & Setup
 
