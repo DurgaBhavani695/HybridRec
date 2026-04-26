@@ -7,7 +7,14 @@ class SentimentAnalyzer:
         
     def analyze_mood(self, text):
         score = self.analyzer.polarity_scores(text)['compound']
-        category = "positive" if score >= 0.05 else ("negative" if score <= -0.05 else "neutral")
+        # Adjusted thresholds: VADER is biased towards positive. 
+        # Using a higher threshold for positive, and allowing a broader range for neutral.
+        if score > 0.2:
+            category = "positive"
+        elif score < -0.1:
+            category = "negative"
+        else:
+            category = "neutral"
         return category, score
             
     def generate_item_sentiments(self, movies_df):
