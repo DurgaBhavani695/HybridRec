@@ -32,19 +32,27 @@ The HybridRec++ engine integrates three distinct recommendation layers with a re
 
 ## 🛠️ Installation & Setup
 
-This project uses `uv` for dependency management.
+This project uses `uv` for lightning-fast dependency management and environment execution.
 
 ### Prerequisites
 - Python 3.10+
 - `uv`
 
 ### Quick Start
-Run the setup script:
-```bash
-python setup.py
-streamlit run app/streamlit_app.py
-```
-*(This automatically initializes the environment, installs dependencies, and downloads the necessary data.)*
+1. **Initialize & Setup:**
+   ```bash
+   # Initializes virtual environment, installs dependencies, and downloads data
+   uv run setup.py
+   ```
+2. **Launch Application:**
+   ```bash
+   uv run streamlit run app/streamlit_app.py
+   ```
+3. **Run Tests:**
+   ```bash
+   uv run pytest tests/test_collaborative.py
+   ```
+*(Using `uv run` ensures the application and tests always execute within the project's isolated, reproducible environment.)*
 
 
 ## 📊 Dataset Distribution
