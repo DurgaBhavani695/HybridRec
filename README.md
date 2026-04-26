@@ -85,7 +85,7 @@ You can test the system's adaptability by trying these different mood scenarios:
 | **Baseline** | *"Just a normal day."* | Allows the Collaborative Engine to lead with pure history. |
 
 ### Visual Demonstrations
-The system dynamically adjusts its scoring algorithm based on both **Sentiment Intensity** and **Intent (Topic Extraction)**. The screenshots below demonstrate the recommendation engine's adaptability to various user moods, contexts, and profiles.
+The system's hybrid logic dynamically calculates relevance by orchestrating **Sentiment Intensity** with **Intent-Based Topic Extraction**. The following visual gallery illustrates the engine's real-time adaptability, showing how it transforms raw user feedback into distinct, highly personalized recommendation rankings across diverse moods, contexts, and user profiles.
 
 ![UI Demonstration](docs/assets/ui_example_1.png) ![UI Demonstration](docs/assets/ui_example_2.png) ![UI Demonstration](docs/assets/ui_example_3.png) 
 ![UI Demonstration](docs/assets/ui_example_4.png) ![UI Demonstration](docs/assets/ui_example_5.png) ![UI Demonstration](docs/assets/ui_example_6.png)
