@@ -1,0 +1,8 @@
+README.md
+main.py
+pyproject.toml
+hybridrec.egg-info/PKG-INFO
+hybridrec.egg-info/SOURCES.txt
+hybridrec.egg-info/dependency_links.txt
+hybridrec.egg-info/requires.txt
+hybridrec.egg-info/top_level.txt
