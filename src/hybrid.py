@@ -23,14 +23,30 @@ class HybridRecommender:
         # Base Hybrid Score
         recs['hybrid_score'] = (0.5 * recs['collab_score']) + (0.3 * recs['content_score']) + (0.2 * recs['sent_norm'])
         
-        # Dynamic Context-Aware Adjustment using Intensity (0.0 to 1.0)
+        # 4. Dynamic Context-Aware Adjustment using Intensity (0.0 to 1.0)
         intensity = abs(mood_score)
         
         if mood_score < -0.05: # Negative Sentiment
-            # Boost feel-good (high sentiment) items proportional to sadness intensity
             recs['hybrid_score'] += intensity * recs['sent_norm'] * 0.5
         elif mood_score > 0.05: # Positive Sentiment
-            # Boost generally high-rated (high collab) items proportional to joy intensity
             recs['hybrid_score'] += intensity * recs['collab_score'] * 0.5
+            
+        # 5. Topic-Aware Context Matching
+        mood_text_lower = mood_text.lower()
+        topic_map = {
+            "sports": "Action", 
+            "love": "Romance",
+            "funny": "Comedy",
+            "scary": "Horror",
+            "future": "Sci-Fi",
+            "space": "Sci-Fi",
+            "thrill": "Thriller",
+            "adventure": "Adventure"
+        }
+        
+        for keyword, genre in topic_map.items():
+            if keyword in mood_text_lower:
+                # Boost movies matching this genre
+                recs.loc[recs['genres'].str.contains(genre, case=False), 'hybrid_score'] += 0.3
             
         return recs.sort_values(by='hybrid_score', ascending=False).head(top_n), mood
