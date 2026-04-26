@@ -1,0 +1,17 @@
+[project]
+name = "hybridrec"
+version = "0.1.0"
+description = "Context & Sentiment-Aware Recommendation System"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "nltk",
+    "vaderSentiment",
+    "streamlit",
+    "matplotlib",
+    "seaborn",
+    "requests"
+]
