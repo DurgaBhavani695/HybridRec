@@ -91,4 +91,4 @@ The system dynamically adjusts its scoring algorithm based on both **Sentiment I
 ![UI Demonstration](docs/assets/ui_example_4.png) ![UI Demonstration](docs/assets/ui_example_5.png) ![UI Demonstration](docs/assets/ui_example_6.png)
 
 ---
-*HybridRec++ Recommendation Engine v0.1.0 | Developed for production-grade context-aware systems.*
+*HybridRec++ Recommendation Engine v0.1.0 | Updated: April 2026 | Developed for production-grade context-aware systems.*
