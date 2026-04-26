@@ -18,36 +18,20 @@
 
 ## 🛠️ Installation & Setup
 
-This project uses `uv` for lightning-fast dependency management.
+This project uses `uv` for dependency management.
 
 ### Prerequisites
 - Python 3.10+
-- `uv` (recommended)
+- `uv`
 
-### Quick Start (Windows)
-Simply run the provided batch script:
+### Quick Start
+Run the setup script:
 ```bash
-run_hybridrec.bat
+python setup.py
+streamlit run app/streamlit_app.py
 ```
+*(This automatically initializes the environment, installs dependencies, and downloads the necessary data.)*
 
-### Manual Setup
-1. **Create and activate environment:**
-   ```bash
-   uv venv
-   .venv\Scripts\activate
-   ```
-2. **Install dependencies:**
-   ```bash
-   uv pip install -e .
-   ```
-3. **Download data:**
-   ```bash
-   python src/download_data.py
-   ```
-4. **Launch the App:**
-   ```bash
-   streamlit run app/streamlit_app.py
-   ```
 
 ## 📊 Dataset
 The system uses the **MovieLens Small Dataset** (100k ratings on 9k movies), which is automatically downloaded and processed on first run.
