@@ -83,16 +83,10 @@ You can test the system's adaptability by trying these different mood scenarios:
 | **Baseline** | *"Just a normal day."* | Allows the Collaborative Engine to lead with pure history. |
 
 ### Visual Demonstrations
-The system dynamically adjusts its scoring algorithm based on both **Sentiment Intensity** and **Intent (Topic Extraction)**.
+The system dynamically adjusts its scoring algorithm based on both **Sentiment Intensity** and **Intent (Topic Extraction)**. The screenshots below demonstrate the recommendation engine's adaptability to various user moods, contexts, and profiles.
 
-| Mood Input Scenario | Detected Mood | UI Demonstration |
-| :--- | :--- | :--- |
-| **"Tired/Relaxing"** | Positive | ![Result 1](docs/assets/ui_example_1.png) |
-| **"Pumped/Sports"** | Positive (High Intensity) | ![Result 2](docs/assets/ui_example_2.png) |
-| **"Mixed/Complex Mood"** | Variable | ![Result 3](docs/assets/ui_example_3.png) |
-| **"Detailed Context Input"** | Context-Aware | ![Result 4](docs/assets/ui_example_4.png) |
-| **User Profile: 1** | Personalization | ![Result 5](docs/assets/ui_example_5.png) |
-| **User Profile: 4** | Personalization | ![Result 6](docs/assets/ui_example_6.png) |
+![UI Demonstration](docs/assets/ui_example_1.png) ![UI Demonstration](docs/assets/ui_example_2.png) ![UI Demonstration](docs/assets/ui_example_3.png) 
+![UI Demonstration](docs/assets/ui_example_4.png) ![UI Demonstration](docs/assets/ui_example_5.png) ![UI Demonstration](docs/assets/ui_example_6.png)
 
 ---
 *HybridRec++ Recommendation Engine v0.1.0 | Developed for production-grade context-aware systems.*
