@@ -120,29 +120,35 @@ if get_recs:
         st.markdown("---")
         st.subheader(f"Top {top_n} Recommendations for You")
         
-        # Display recommendations in a nice grid/list
+        # Display recommendations
+        # Calculate min and max for normalization
+        min_score = recs['hybrid_score'].min()
+        max_score = recs['hybrid_score'].max()
+
         for i, (idx, row) in enumerate(recs.iterrows()):
             with st.container():
                 col_rank, col_details, col_score = st.columns([0.1, 0.65, 0.25])
-                
+
                 with col_rank:
                     st.markdown(f"### #{i+1}")
-                
+
                 with col_details:
                     st.markdown(f"**{row['title']}**")
                     st.caption(f"🎭 Genres: {row['genres']}")
-                    
+
                     # Add a small badge for high sentiment items
                     if row['sentiment_score'] > 0.5:
                         st.markdown("⭐ *Highly Positive Sentiment*")
-                
+
                 with col_score:
-                    score = row['hybrid_score']
-                    # Normalize score for display if needed, but here it should be 0-1
-                    display_score = min(max(score, 0.0), 1.0)
-                    st.progress(display_score)
-                    st.write(f"Match Score: **{score:.2%}**")
-                
+                    # Normalize: (score - min) / (max - min)
+                    # This ensures the best is 100% and worst is 0% relative to this list
+                    range_score = max_score - min_score
+                    norm_score = (row['hybrid_score'] - min_score) / (range_score + 1e-9)
+
+                    st.progress(float(norm_score))
+                    st.write(f"Match Score: **{norm_score:.1%}**")
+
                 st.markdown("<br>", unsafe_allow_html=True)
                 st.divider()
 
