@@ -3,15 +3,16 @@ import sys
 import pandas as pd
 import numpy as np
 
-# Add src to path
-sys.path.append(os.path.join(os.getcwd(), 'src'))
+# Add root directory to path to allow importing from src
+sys.path.append(os.path.abspath(os.path.dirname(__file__)))
 
 try:
-    from data_loader import load_movielens_data
-    from collaborative import CollaborativeRecommender
-    from content_based import ContentBasedRecommender
-    from sentiment import SentimentAnalyzer
-    from hybrid import HybridRecommender
+    from src.data_loader import load_movielens_data
+    from src.collaborative import CollaborativeRecommender
+    from src.content_based import ContentBasedRecommender
+    from src.sentiment import SentimentAnalyzer
+    from src.hybrid import HybridRecommender
+    from src.download_data import download_movielens
     print("✅ All imports successful!")
 except Exception as e:
     print(f"❌ Import failed: {e}")
@@ -23,7 +24,6 @@ def verify():
     # 1. Load Data
     if not os.path.exists("data/raw/movies.csv"):
         print("📥 Downloading data...")
-        from download_data import download_movielens
         download_movielens()
         
     ratings, movies = load_movielens_data()
