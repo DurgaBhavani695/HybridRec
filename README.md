@@ -1,13 +1,23 @@
 # HybridRec++ 🎬
 
-**HybridRec++** is a production-quality movie recommendation system that leverages multiple data signals to provide highly personalized suggestions. It uniquely integrates **Collaborative Filtering**, **Content-Based Filtering**, and **Real-Time Sentiment Analysis** to understand not just what you like, but how you feel *right now*.
+**HybridRec++** is a production-grade recommendation system that bridges the gap between collaborative patterns and user sentiment. By integrating **Real-Time NLP** with **Matrix Factorization**, it delivers recommendations that adapt to the user's specific context.
 
 ## 🚀 Key Features
 
-- **Hybrid Intelligence**: Combines SVD-based Matrix Factorization with TF-IDF Content Analysis.
-- **Context-Aware**: Uses VADER Sentiment Analysis to process user mood input and dynamically re-weight recommendations.
-- **Interactive UI**: A polished Streamlit dashboard for real-time interaction and mood-based discovery.
-- **Cold-Start Resilience**: Leverages content features when user history is thin.
+- **Dynamic Hybrid Engine**: Combines Collaborative Filtering (MF) and Content-Based (TF-IDF) scores.
+- **Mood-Aware Context**: Uses **VADER NLP** to analyze user sentiment in real-time, dynamically re-weighting recommendations based on their current state of mind.
+- **Production-Ready Architecture**: Modular design, TDD-validated core, and cross-platform automated setup.
+- **Visual Analytics**: Built-in architecture visualization and data distribution insights.
+
+## 🛠️ Tech Stack
+| Category | Technology |
+| :--- | :--- |
+| **Language** | Python 3.10+ |
+| **Machine Learning** | Scikit-Learn (TruncatedSVD), Scikit-Surprise |
+| **NLP** | NLTK, VADER Sentiment |
+| **UI/Dashboard** | Streamlit |
+| **Environment** | uv (High-speed package management) |
+| **Automation** | Pytest, Git, GitHub Actions/CLI |
 
 ## 🏗️ Architecture
 
