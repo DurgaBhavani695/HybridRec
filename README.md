@@ -11,6 +11,10 @@
 
 ## 🏗️ Architecture
 
+The HybridRec++ engine integrates three distinct recommendation layers with a real-time sentiment analysis context layer.
+
+![Architecture Diagram](docs/assets/architecture_diagram.png)
+
 1.  **Collaborative Layer**: Analyzes user-item rating patterns using Truncated SVD.
 2.  **Content Layer**: Processes movie metadata (genres) using TF-IDF and Cosine Similarity.
 3.  **Sentiment Layer**: Analyzes natural language input to detect user mood (Positive/Negative/Neutral).
