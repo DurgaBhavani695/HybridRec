@@ -91,4 +91,3 @@ The system's hybrid logic dynamically calculates relevance by orchestrating **Se
 ![UI Demonstration](docs/assets/ui_example_4.png) ![UI Demonstration](docs/assets/ui_example_5.png) ![UI Demonstration](docs/assets/ui_example_6.png)
 
 ---
-*HybridRec++ Recommendation Engine v0.1.0 | Updated: April 2026 | Developed for production-grade context-aware systems.*
