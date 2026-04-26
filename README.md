@@ -50,4 +50,4 @@ The final recommendation score is calculated as follows:
 - **Positive Mood**: Increases weight of collaborative filtering (leveraging historical preferences).
 
 ---
-*Built with ❤️ using Python, Scikit-Learn, VADER, and Streamlit.*
+*HybridRec++ Recommendation Engine v0.1.0 | Developed for production-grade context-aware systems.*
