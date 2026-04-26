@@ -4,7 +4,7 @@
 
 ## 🚀 Key Features
 
-- **Deep Hybrid Engine**: Seamlessly fuses collaborative filtering (Matrix Factorization) with content-based signals for highly accurate, multi-faceted recommendations.
+- **Hybrid Recommendation Engine**: Integrates SVD-based collaborative filtering with TF-IDF content-based similarity using a weighted fusion strategy to improve recommendation accuracy and handle cold-start problems.
 - **True Personalization**: Recommendations are driven by your unique historical rating patterns, ensuring that the engine learns and adapts to your specific cinematic taste.
 - **Mood-Aware Context**: Uses **VADER NLP** to analyze your sentiment in real-time, dynamically re-weighting the engine's output based on your current emotional state.
 - **Intent-Driven Discovery**: Advanced keyword extraction instantly surfaces movies that match your specific thematic requests (e.g., 'sports', 'space', 'thriller').
