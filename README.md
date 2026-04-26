@@ -85,14 +85,14 @@ You can test the system's adaptability by trying these different mood scenarios:
 ### Visual Demonstrations
 The system dynamically adjusts its scoring algorithm based on both **Sentiment Intensity** and **Intent (Topic Extraction)**.
 
-| Mood Input | Detected Mood | UI Result |
+| Mood Input Scenario | Detected Mood | UI Demonstration |
 | :--- | :--- | :--- |
-| Relaxing mood | Positive/Neutral | ![Result 1](docs/assets/ui_example_1.png) |
-| Pumped/Action | Positive (High Intensity) | ![Result 2](docs/assets/ui_example_2.png) |
-| Mixed Sentiment | Variable | ![Result 3](docs/assets/ui_example_3.png) |
-| Detailed Context | Context-Aware | ![Result 4](docs/assets/ui_example_4.png) |
-| User Profile 1 | Personalization | ![Result 5](docs/assets/ui_example_5.png) |
-| User Profile 4 | Personalization | ![Result 6](docs/assets/ui_example_6.png) |
+| **"Tired/Relaxing"** | Positive | ![Result 1](docs/assets/ui_example_1.png) |
+| **"Pumped/Sports"** | Positive (High Intensity) | ![Result 2](docs/assets/ui_example_2.png) |
+| **"Mixed/Complex Mood"** | Variable | ![Result 3](docs/assets/ui_example_3.png) |
+| **"Detailed Context Input"** | Context-Aware | ![Result 4](docs/assets/ui_example_4.png) |
+| **User Profile: 1** | Personalization | ![Result 5](docs/assets/ui_example_5.png) |
+| **User Profile: 4** | Personalization | ![Result 6](docs/assets/ui_example_6.png) |
 
 ---
 *HybridRec++ Recommendation Engine v0.1.0 | Developed for production-grade context-aware systems.*
